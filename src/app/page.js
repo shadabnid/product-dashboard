@@ -291,7 +291,8 @@ export default function Home() {
   // Get unique categories
   const categories = [...new Set(data.map((product) => product.category))];
   return (
-    <div>
+    <div className="flex items-center justify-center">
+    <div className="max-w-screen-2xl ">
       
       
       <div className="sm:mx-16 mt-10 flex justify-between mx-2">
@@ -322,7 +323,7 @@ export default function Home() {
 
 
       </div>
-      <div className="max-w-screen-2xl flex flex-wrap justify-center gap-4 mt-10 px-5">
+      <div className=" flex flex-wrap justify-center  gap-4 mt-10 px-5">
         {
           products.map((ele, index) => (
             <Link href={`/${ele.id}`} key={ele.id}>
@@ -331,6 +332,7 @@ export default function Home() {
           ))
         }
       </div>
+    </div>
     </div>
   );
 }
